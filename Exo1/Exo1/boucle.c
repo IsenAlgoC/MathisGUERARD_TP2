@@ -52,4 +52,30 @@ void main() {
 	printf("\n\n");
 	system("pause");
 
+	//test numéro 3, demander à l'utilisateur de rentrer une valeur de n
+	//on reprend la boucle for précédente
+	printf("Rentrez une valeur pour n : ");
+	scanf_s("%d", &n);
+	sum = 0;
+	for (i = 2; i <= n; i++) {
+		sum = sum + i;
+	}
+	printf("Somme = %d \nN = %d", sum, n);
+	printf("\n\n");
+	system("pause");
+
+	//même exercice que le précédent mais en demandant à l'utilisateur de modifier son entrée si n est trop grand
+	//on passe d'une boucle for à une boucle while
+	n = 74873;
+	while (n > 361) {
+		printf("Rentrez une valeur pour n : ");
+		scanf_s("%d", &n);
+	}
+	sum = 0;
+	for (i = 2; i <= n; i++) {
+		sum = sum + i;
+	}
+	printf("Somme = %d \nN = %d", sum, n);
+	printf("\n\n");
+	system("pause");
 }
