@@ -9,7 +9,7 @@ void main() {
 	do {
 		//le joueur choisit le niveau de difficulté
 		int niveau = 1;
-		printf("Choisissez votre niveau de difficulté (De 1 a 6) : ");
+		printf("Choisissez votre niveau de difficulte (De 1 a 6) : ");
 		scanf_s("%d", &niveau);
 
 		//on créé la variable aléatoire que le joueur doit deviner
@@ -23,7 +23,7 @@ void main() {
 
 		//on utilise une boucle pour répéter la devinette jusqu'à ce que le joueur trouve le nombre
 		while (!(ValeurDeviner == ValeurPropose)) {
-			printf("\nEntrez un nombre entier entre 0 et %f : ", pow(10, niveau));
+			printf("\nEntrez un nombre entier entre 0 et %d : ", (int)pow(10, niveau));
 			scanf_s("%d", &ValeurPropose);
 			coup = coup + 1;
 
@@ -39,8 +39,10 @@ void main() {
 				break;
 			}
 		}
-		printf("\nVous avez gagne, bravo");
-		printf("\nVous avez mis %d coups pour gagner", coup);
+		if (ValeurDeviner == ValeurPropose) {
+			printf("\nVous avez gagne, bravo");
+			printf("\nVous avez mis %d coups pour gagner", coup);
+		}
 
 		printf("\n\nTapez 1 pour rejouer : ");
 		scanf_s("%d", &again);
